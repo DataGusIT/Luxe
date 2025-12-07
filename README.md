@@ -18,7 +18,7 @@ O sistema simula o funcionamento completo de uma loja virtual, gerenciando o est
 
 | Landing Page (Hero) | Catálogo de Produtos | Responsividade Mobile |
 | :---: | :---: | :---: |
-| <img alt="Hero Section" src="./assets/image_7fba1a.jpg" /> | <img alt="Catálogo de Produtos" src="./assets/image_7fb2b1.jpg" /> | <img alt="Visualização Mobile" src="./assets/image_7f39fc.png" /> |
+| <img width="1919" height="914" alt="Image" src="https://github.com/user-attachments/assets/704e7f2e-9d02-41b4-bc82-ddcf51f1f1a6" /> | <img width="1900" height="1079" alt="Image" src="https://github.com/user-attachments/assets/8b56765e-eef0-4aec-8b33-433684b20e25" /> | <img width="356" height="620" alt="Image" src="https://github.com/user-attachments/assets/bb68cd1b-2485-4bf9-877a-7457c5e2cf3d" /> |
 
 ## ✨ Funcionalidades
 
