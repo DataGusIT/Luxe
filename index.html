@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXE | Design & Interiores</title>
+
+    <!-- Fontes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Ícones Remix -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- SEU CSS EXTERNO AQUI -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="header">
+        <nav>
+            <div class="logo">LUXE.</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#collection">Coleção</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#journal">Journal</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button class="icon-btn" onclick="toggleSearch()"><i class="ri-search-line"></i></button>
+                <button class="icon-btn"><i class="ri-heart-line"></i></button>
+                <button class="icon-btn" id="cart-btn" onclick="openSidebar()">
+                    <i class="ri-shopping-bag-line"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content reveal">
+            <h1>Minimalismo <br>Essencial</h1>
+            <p>Redefinindo o luxo através da simplicidade e design atemporal.</p>
+            <button class="btn">Explorar Coleção</button>
+        </div>
+    </section>
+
+    <section class="products-section" id="shop">
+        <div class="section-header reveal">
+            <span>New Arrivals</span>
+            <h2>Curadoria Exclusiva</h2>
+        </div>
+        <div class="products-grid" id="products-grid">
+            <!-- Produtos serão carregados via JS -->
+        </div>
+    </section>
+
+    <section class="parallax-banner reveal">
+        <div class="parallax-content">
+            <h2>Design de Interiores</h2>
+            <p style="margin: 1.5rem 0; color: #666;">Transforme seu espaço com nossa consultoria exclusiva de design.
+                Cada peça conta uma história única.</p>
+            <button class="btn btn-dark">Agendar Consultoria</button>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="features-grid">
+            <div class="feature reveal">
+                <i class="ri-truck-line feature-icon"></i>
+                <h3>Envio Global</h3>
+                <p>Entrega segura e rastreada para todo o mundo.</p>
+            </div>
+            <div class="feature reveal">
+                <i class="ri-shield-check-line feature-icon"></i>
+                <h3>Garantia Estendida</h3>
+                <p>2 anos de garantia em todos os móveis.</p>
+            </div>
+            <div class="feature reveal">
+                <i class="ri-service-line feature-icon"></i>
+                <h3>Concierge 24/7</h3>
+                <p>Atendimento personalizado a qualquer hora.</p>
+            </div>
+            <div class="feature reveal">
+                <i class="ri-recycle-line feature-icon"></i>
+                <h3>Sustentável</h3>
+                <p>Materiais de origem ética e responsável.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <span class="footer-logo">LUXE.</span>
+                <p class="footer-desc">Elevando o padrão de vida através de design excepcional e qualidade
+                    intransigente.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-pinterest-line"></i></a>
+                    <a href="#"><i class="ri-twitter-x-line"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-heading">Explorar</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Sofás & Poltronas</a></li>
+                    <li><a href="#">Iluminação</a></li>
+                    <li><a href="#">Decoração</a></li>
+                    <li><a href="#">Móveis Externos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-heading">Suporte</h4>
+                <ul class="footer-links">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Envio & Retorno</a></li>
+                    <li><a href="#">Cuidados com Produtos</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-heading">Newsletter</h4>
+                <p style="color: #888; font-size: 0.9rem; margin-bottom: 1rem;">Inscreva-se para novidades exclusivas.
+                </p>
+                <div style="display: flex; border-bottom: 1px solid #444;">
+                    <input type="email" placeholder="Seu e-mail"
+                        style="background: none; border: none; color: white; padding: 0.5rem; width: 100%; outline: none;">
+                    <button style="background: none; border: none; color: white; cursor: pointer;">SCH</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 LUXE Interiors. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Overlay de Busca -->
+    <div class="search-overlay" id="search-overlay">
+        <div class="search-container">
+            <button class="close-search" onclick="toggleSearch()">×</button>
+            <input type="text" class="search-input" id="search-input" placeholder="O que você procura?">
+        </div>
+    </div>
+
+    <!-- Sidebar do Carrinho -->
+    <div class="sidebar-overlay" id="sidebar-overlay" onclick="closeSidebar()"></div>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3 id="sidebar-title">Carrinho</h3>
+            <button class="sidebar-close" onclick="closeSidebar()">×</button>
+        </div>
+        <div class="sidebar-content" id="sidebar-content">
+            <!-- Itens do carrinho via JS -->
+        </div>
+        <div class="cart-footer" id="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cart-total-price">R$ 0,00</span>
+            </div>
+            <button class="btn btn-dark">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <!-- Notificação Toast -->
+    <div class="toast" id="toast">Item adicionado ao carrinho</div>
+
+    <!-- SEU JS EXTERNO AQUI -->
+    <script src="script.js"></script>
+</body>
+
+</html>
